@@ -114,9 +114,9 @@ body {
   background: #fff;
   color: #111;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
-  font-size: 1.6vw;
+  font-size: 2.0vw;
   line-height: 1.45em;
-  font-weight: 300;
+  font-weight: 400;
   animation: pageFadeIn 1000ms;
   letter-spacing: 0.01em; }
   @media (max-width: 760px) {
@@ -209,7 +209,7 @@ p + p {
       line-height: 1.35em; } }
 
 header, section {
-  width: 50vw;
+  width: 65vw;
   margin-bottom: 0.725em;
   clear: both;
   cursor: default;
@@ -326,7 +326,60 @@ header a.strike:after, .strike .title span:after, .inactive .title span:after {
 .ualg {
   text-decoration: underline;
 }
-
+button, .button, h3 {
+  font-size: 8.5vw;
+  line-height: 1;
+}
+@media (min-width: 45rem) {
+    #newsletter-form button,
+    .button,
+    button,
+    h2,
+    h3 {
+        font-size: 3rem
+    }
+}
+@media (min-width: 60rem) {
+    #newsletter-form button,
+    .button,
+    button,
+    h2,
+    h3 {
+        font-size: 3.15vw
+    }
+}
+#newsletter-form button,
+.button {
+    -webkit-transition: margin-left .15s cubic-bezier(.55, 0, .1, 1);
+    transition: margin-left .15s cubic-bezier(.55, 0, .1, 1)
+}
+#newsletter-form button:hover,
+.button:hover {
+    margin-left: .2em
+}
+#newsletter-form button.arrow-left:before,
+.button.arrow-left:before {
+    margin-right: .35em;
+    content: "\2190"
+}
+#newsletter-form button.arrow-left:hover,
+.button.arrow-left:hover {
+    margin-left: -.2em
+}
+#newsletter-form button.arrow-right:after,
+.button.arrow-right:after {
+    margin-left: .35em;
+    content: "\2192"
+}
+#newsletter-form button:disabled,
+.button:disabled {
+    cursor: default
+}
+#newsletter-form main button:visited,
+main #newsletter-form button:visited,
+main .button:visited {
+    color: #bebebe
+}
 footer {
   margin-top: 10vw;
   width: 50vw; }
